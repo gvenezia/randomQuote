@@ -1,47 +1,84 @@
 /* html elements a-z */
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
   color: #00056f;
-  background: linear-gradient(#cbf2ce, white);
-}
-
-.display-4 {
-    font-family: "Bungee Shade";   
+  background-color: #CBF2CE;
+  background: -webkit-linear-gradient(-180deg, rgb(203, 242, 206), rgb(255, 255, 255));
+  background: linear-gradient(-180deg, rgb(203, 242, 206), rgb(255, 255, 255));
+  background-repeat: no-repeat;
+  font-family: Bungee;
 }
 
 p {
   margin-top: 1rem;
-  padding: .1em;
+  padding: .2em;
   text-align: center;
   background-color: inherit;
   border: 10px solid ;
   border-radius: 0%;
 }
 
-.quote-button:hover {
-  box-shadow: 0px 0px 100px #fffaa0;
-  background-color: #f9f7ca;
-  cursor: pointer;
-  
+/* Classes, a -> z */
+.comma {
+  font-size: 5rem;
+  font-family: "Permanent Marker";
 }
 
-/* Classes a-z */
-
 .display-4 {
+    font-family: "Bungee Shade";   
     box-shadow: 0px 0px 50px white;
+}
+
+.quote {
+    font-family: "Bungee";
+    font-weight: normal;
 }
 
 .quote-button {
   font-size: 1.5rem;
   white-space: normal;
+  color: #E4F8E5;
+  background-color: #00056f;
+  margin: 0px 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "Bungee Hairline";
+  text-shadow: 0px 0px 5px #f9f7ca;
+  font-weight: bold;
 }
+
+.quote-button:hover {
+  color: #f9f7ca;
+  cursor: pointer;
+  /*text-shadow: 0px 0px 10px #f9f7ca;*/
+}
+
 
 /* ID's, a-z */
 
 #quote {
-    font-size: 3rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+#quote-button-p {
+  padding: 0px;
+}
+
+#quote-text {
+  border: none;;
+}
+
+#quote-author {
+  font-size: 2rem;
+  font-style: normal;
+}
+
+#comma2 {
+  text-align: right;
+  margin-left: 80%;
 }

@@ -8,10 +8,13 @@
     <title>Random Quote Machine</title>
     
     <!--Google Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade|Grand+Hotel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade|Bungee+Hairline|Bungee|Permanent+Marker">
     
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
+    
+    <!--Font Awesome 5-->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     
     <!--Personal CSS-->
     <link rel="stylesheet" href="index.css">
@@ -26,19 +29,27 @@
         <div class="col-lg-5">
           <p class="display-4">Random Design Quotes</p>
           
-          <!--Generate Quote Button-->
-          <p>
-            <button type="button" class="btn btn-block quote-button" >
-            Click here to generate a new quote... 
-          </button>
-          </p>
+          <!-- Buttons -->
+          <div id="quote-button-p">
+            <!--Generate Quote Button-->
+            <button type="button" id="generate" class="btn btn-block quote-button" >
+              Generate a new quote... 
+            </button>
+            
+            <!--Twitter Button-->
+            <button type="button" id="tweet" class="btn btn-block quote-button">
+                Tweet the quote <i class="fab fa-twitter"></i>
+            </button>
+          </div>
           
         </div>
         
         <!--Right column-->
         <div class="col-lg-7 quote" href="#">
+        
           <!--responseText is displayed here-->
           <div id='quote'></div>
+        
         </div>
         
       </div><!--End Row-->

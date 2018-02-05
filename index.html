@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Random Quote Machine</title>
+    
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bungee+Shade|Grand+Hotel">
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
+    
+    <!--Personal CSS-->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!--Container-->
+    <div class="container-fluid">
+      <!--Row-->
+      <div class="row justify-content-center">
+        
+        <!--left column-->
+        <div class="col-lg-5">
+          <p class="display-4">Random Design Quotes</p>
+          
+          <!--Generate Quote Button-->
+          <p>
+            <button type="button" class="btn btn-block quote-button" >
+            Click here to generate a new quote... 
+          </button>
+          </p>
+          
+        </div>
+        
+        <!--Right column-->
+        <div class="col-lg-7 quote" href="#">
+          <!--responseText is displayed here-->
+          <div id='quote'></div>
+        </div>
+        
+      </div><!--End Row-->
+    </div> <!--End Container-->
+    
+    <!-- jQuery -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    
+    <script src="index.js"></script>
+</body>
+</html>

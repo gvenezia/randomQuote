@@ -1,0 +1,47 @@
+/* html elements a-z */
+
+html {
+    height: 100%;
+}
+
+body {
+  color: #00056f;
+  background: linear-gradient(#cbf2ce, white);
+}
+
+.display-4 {
+    font-family: "Bungee Shade";   
+}
+
+p {
+  margin-top: 1rem;
+  padding: .1em;
+  text-align: center;
+  background-color: inherit;
+  border: 10px solid ;
+  border-radius: 0%;
+}
+
+.quote-button:hover {
+  box-shadow: 0px 0px 100px #fffaa0;
+  background-color: #f9f7ca;
+  cursor: pointer;
+  
+}
+
+/* Classes a-z */
+
+.display-4 {
+    box-shadow: 0px 0px 50px white;
+}
+
+.quote-button {
+  font-size: 1.5rem;
+  white-space: normal;
+}
+
+/* ID's, a-z */
+
+#quote {
+    font-size: 3rem;
+}

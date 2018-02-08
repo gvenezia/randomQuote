@@ -8,4 +8,4 @@ Created for Free Code Camp
 
 You can see my working version on [Codepen](https://codepen.io/gvenezia/full/NXaNQO/)
 
-!(https://github.com/gvenezia/myWebsite/blob/master/images/randomQuote.png)
+![screenshot of the random quote web app](https://github.com/gvenezia/myWebsite/blob/master/images/randomQuote.png)

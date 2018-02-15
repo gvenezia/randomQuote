@@ -1,6 +1,6 @@
 ;
 (function IIFE(){
-  // "use strict";
+  "use strict";
   
   // ============= Variables ==============
   var quoteString = "",
@@ -72,7 +72,7 @@
       tweetableString = `"${quoteString}" —${quoteAuthor}`;
     }
     
-    // Set the href link on the tweetbutton
+    // Set the href twitter link + the current quote on the tweetbutton 
     tweetButtonLink.href = `https://twitter.com/intent/tweet?text=${tweetableString}`;
   };
   

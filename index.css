@@ -23,7 +23,7 @@ p {
 }
 
 /* Classes, a -> z */
-.comma {
+.big-quotes {
   font-size: 5rem;
   font-family: "Permanent Marker";
 }
@@ -60,6 +60,11 @@ p {
 
 /* ID's, a-z */
 
+#big-quote-bottom {
+  text-align: right;
+  margin-left: 80%;
+}
+
 #quote {
     font-size: 1.5rem;
     font-style: italic;
@@ -78,7 +83,3 @@ p {
   font-style: normal;
 }
 
-#comma2 {
-  text-align: right;
-  margin-left: 80%;
-}

@@ -1,24 +1,32 @@
-// IIFE for containing scope of variables
-;(function(){
+;
+(function IIFE(){
+  // "use strict";
   
-var quoteString = "";
-var quoteAuthor = "";
-
-// Get a new quote on page load 
-$(document).ready(function(){
-  getQuote();
-});
+  // ============= Variables ==============
+  var quoteString = "",
+      quoteAuthor = "",
+      tweetableString = "";
+      
+  const tweetButtonLink = document.getElementById('tweet'); 
   
-//   Get a new quote on button click
-$("#generate").on("click", function(e){
-      getQuote();
-});
-
-$("#generate").on("click", function(e){
-  tweetQuote();
-});
+  // ============= Page Load ==============
+  // Get a new quote on page load 
+  $(document).ready(function(){
+    getQuote();
+    
+    // setTweetHrefText();
+  });
+    
+  // ============= Click Events ==============
+  // Get a new quote on button click
+  $("#generate").on("click", function(e){
+    getQuote();
+    
+    // setTweetHrefText();
+  });
   
-  
+  // ============= Functions ==============
+  // Get quote from Quotes on Design API
   function getQuote(){
       var xhttp = new XMLHttpRequest();
       
@@ -31,29 +39,41 @@ $("#generate").on("click", function(e){
           quoteString = $(response[0].content).text();
           quoteAuthor = response[0].title;
           
+          // Eliminate any extra spaces at the end of the string
+          while ( quoteString.endsWith(" ") ){
+              quoteString = quoteString.slice(0, -1);
+          }
+          
+          setTweetHrefText(); // Why does this only work within the getQuote function and not in the event listeners?
+           
           // Put the quote on the page
           $('#quote').html(
-              '<span class="comma">"</span><p id="quote-text">' + quoteString + 
-              '<br><span class="comma" id="comma2">"</span><br> ' + "<span id='quote-author'> — " + 
+              '<span id="big-quote-top" class="big-quotes">"</span><p id="quote-text">' + quoteString + 
+              '<br><span class="big-quotes" id="big-quote-bottom">"</span><br> ' + "<span id='quote-author'> — " + 
               quoteAuthor + " — </span></p>"
               ); 
-        }
+          }
       };
       
+      // Open the url with a random number in order to get a random quote
       xhttp.open("GET", "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=" + Math.random(), true);
       xhttp.send();
   };
   
-  function tweetQuote(){
-    var xhttp = new XMLHttpRequest();
-      
-    xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4 && xhttp.status == 200) {
-          console.log("all good w/ tweetQuote()");
-        }
-    };
-   xhttp.open("POST", "https://api.twitter.com/1.1/statuses/update.json?status=" + quoteString + " –" + quoteAuthor, true);
-   xhttp.send();
+  // set the href link on the tweet button 
+  // attach the quote's string to the twitter API link
+  function setTweetHrefText(){
+    // If the quote is too long, shorten it and add an elipsis.
+    // Otherwise, simply assign quoteString to tweetableString
+    if (quoteString.length + quoteAuthor.length + 2 > 280) {
+      tweetableString = quoteString.slice(0, 279 - quoteAuthor.length - 5);
+      tweetableString = `"${tweetableString}..." —${quoteAuthor}`;
+    } else {
+      tweetableString = `"${quoteString}" —${quoteAuthor}`;
+    }
+    
+    // Set the href link on the tweetbutton
+    tweetButtonLink.href = `https://twitter.com/intent/tweet?text=${tweetableString}`;
   };
   
-}());
+})();

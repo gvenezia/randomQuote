@@ -32,12 +32,12 @@
       
       xhttp.onreadystatechange = function () {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
-        // convert the response to JSON
-          var response = JSON.parse(this.responseText);
+        // convert the Quotes on Design (QoD) response to JSON
+          var QoDresponse = JSON.parse(this.responseText);
           
         // Extract the text from the preformatted content (the API put the content in an <p> elements)
-          quoteString = $(response[0].content).text();
-          quoteAuthor = response[0].title;
+          quoteString = $(QoDresponse[0].content).text();
+          quoteAuthor = QoDresponse[0].title;
           
           // Eliminate any extra spaces at the end of the string
           while ( quoteString.endsWith(" ") ){
